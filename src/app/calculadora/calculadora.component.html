@@ -1,0 +1,17 @@
+<div class="max-w-md mx-auto mb-10 p-5 bg-white rounded-lg shadow-lg">
+  <div class="bg-blue-950 text-white p-4 rounded-lg mb-5">
+    <h1 class="text-3xl font-bold text-center">Calculadora</h1>
+  </div>
+  <div class="text-right mb-5 text-2xl font-mono">{{ pantalla }}</div>
+  <div class="grid grid-cols-4 gap-2 mb-5">
+    <button *ngFor="let item of botones" (click)="onButtonClick(item)" class="p-4 bg-gray-200 rounded-lg">{{ item }}</button>
+  </div>
+  <div class="mt-5">
+    <h3 class="text-lg font-bold mb-2">Historial</h3>
+    <ul>
+      <li *ngFor="let item of historial">{{ item }}</li>
+    </ul>
+  </div>
+</div>
+
+
